@@ -1,0 +1,31 @@
+@mixin bg-mixin($image, $height: 100%, $bgPosition: center center){
+  background: url($image);
+  background-repeat: no-repeat;
+  background-position: $bgPosition;
+  background-size: cover;
+  height: $height;
+}
+
+@mixin phone{
+  @media only screen and (min-width: map-get($breakpoints, 'phone')){
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media only screen and(min-width: map-get($breakpoints, 'tablet')){
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media only screen and(min-width: map-get($breakpoints, 'desktop')){
+    @content;
+  }
+}
+
+@mixin desktop-xLarge{
+  @media only screen and(min-width: map-get($breakpoints, 'desktop-xLarge')){
+    @content;
+  }
+}

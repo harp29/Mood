@@ -1,0 +1,64 @@
+@import "mixins";
+
+.land{
+  max-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+
+  .content-inner{
+    height: 100%;
+    width: 100%;
+
+    .icon-box-small-medium{
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      @include desktop-xLarge{
+        width: 1000px;
+      }
+
+    }
+
+    .icon{
+      height: 30%;
+    }
+
+    .logo-box{
+      width: 85%;
+      position: fixed;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      #logo{
+        height: 3%;
+      }
+
+    }
+
+     .land-bg-holder{
+       position: relative;
+       height: 79%;
+       width: 200%;
+
+       .land-bg{
+         @include bg-mixin('../img/lake.jpg', 100%);
+         width: 91%;
+         position: absolute;
+         top: 65%;
+         left: 49%;
+         -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+
+       }
+     }
+
+
+  }
+
+
+}
